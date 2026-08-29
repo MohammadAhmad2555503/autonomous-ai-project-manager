@@ -1,0 +1,1 @@
+Full-stack project management MVP with task dependencies, critical-path graphing, analytics, deterministic risk scoring, and AI project summaries.

@@ -1,0 +1,138 @@
+{
+  "project_name": "Autonomous AI Project Manager",
+  "theme": "dark",
+  "archetype": "Archetype 4 (Swiss & High-Contrast - Dark Variant)",
+  "emotional_tone": "Authoritative, Secure, Elite, Data-Driven, Intelligent",
+  "design_philosophy": "A command-center feel for elite project management. Prioritizes data density, optical clarity, and strict visual hierarchy. Eschews decorative noise in favor of functional geometry and high-contrast signaling for risks and AI insights. Surfaces should feel tactile but razor-sharp.",
+  "colors": {
+    "background": "#09090b",
+    "foreground": "#fafafa",
+    "card": "#09090b",
+    "card_foreground": "#fafafa",
+    "popover": "#09090b",
+    "popover_foreground": "#fafafa",
+    "primary": "#0284c7",
+    "primary_foreground": "#ffffff",
+    "secondary": "#27272a",
+    "secondary_foreground": "#fafafa",
+    "muted": "#27272a",
+    "muted_foreground": "#a1a1aa",
+    "accent": "#1e293b",
+    "accent_foreground": "#f8fafc",
+    "destructive": "#dc2626",
+    "destructive_foreground": "#ffffff",
+    "warning": "#f59e0b",
+    "warning_foreground": "#000000",
+    "success": "#16a34a",
+    "success_foreground": "#ffffff",
+    "border": "#27272a",
+    "input": "#27272a",
+    "ring": "#0284c7"
+  },
+  "typography": {
+    "font_families": {
+      "heading": "'Cabinet Grotesk', sans-serif",
+      "body": "'Manrope', sans-serif",
+      "mono": "'JetBrains Mono', monospace"
+    },
+    "hierarchy": {
+      "h1": "text-4xl sm:text-5xl lg:text-6xl font-black tracking-tighter leading-none",
+      "h2": "text-2xl sm:text-3xl lg:text-4xl font-bold tracking-tight",
+      "h3": "text-xl sm:text-2xl font-semibold tracking-tight",
+      "h4": "text-lg sm:text-xl font-medium tracking-tight",
+      "body": "text-base leading-relaxed text-foreground/90",
+      "small": "text-sm text-muted-foreground",
+      "label": "text-xs font-bold uppercase tracking-[0.2em] text-muted-foreground",
+      "metrics": "font-mono text-3xl font-bold tracking-tight"
+    },
+    "rules": [
+      "No Inter or generic sans for headings.",
+      "Use font-mono for numeric data, IDs, and risk scores.",
+      "Section labels must be uppercase with wide letter-spacing.",
+      "Strict line heights: leading-none for H1/H2, leading-relaxed for body."
+    ]
+  },
+  "spacing_and_layout": {
+    "general": "Dense, highly structured grids with generous padding inside containers to prevent text collision.",
+    "grid_modes": {
+      "dashboard": "The 'Control Room' Grid: grid-cols-1 md:grid-cols-3 lg:grid-cols-4 with gap-4 or gap-6.",
+      "analytics": "Bento Layout: mix col-span-1, col-span-2, row-span-2 for varying data widgets.",
+      "forms": "Max width md (max-w-md) for login, centered. Max width 3xl for project creation."
+    },
+    "surface_strategies": {
+      "cards": "Flat background (bg-card), 1px solid border (border-border), no shadows. 4px border radius (rounded-sm). On hover: border-primary/50.",
+      "header": "Crystal Glassmorphism: bg-background/60 backdrop-blur-xl border-b border-white/10 sticky top-0 z-50.",
+      "ai_insights_panel": "The 'Tracing Beam' effect: Subtle moving gradient border or neon inner glow (drop-shadow-[0_0_8px_rgba(2,132,199,0.3)]) to indicate AI activity."
+    },
+    "padding_scale": [
+      "Use p-6 or p-8 inside primary data cards.",
+      "Use py-12 or py-16 for section spacing."
+    ]
+  },
+  "components_strategy": {
+    "ui_library": "shadcn/ui",
+    "customization_rules": [
+      "Override default shadcn radius to 0.25rem (4px) globally.",
+      "Remove heavy shadows from default shadcn components; rely on 1px borders.",
+      "Forms must use shadcn Input, Select, and Form components, fully styled to match the dark theme.",
+      "Use data-testid attributes on ALL interactive elements (e.g., data-testid='create-project-btn')."
+    ],
+    "specialized_libraries": {
+      "icons": "@phosphor-icons/react (Duotone or Regular weight)",
+      "charts": "recharts (for team workload and delay prediction analytics)",
+      "dependency_graph": "reactflow (MANDATORY for rendering the interactive task dependency network graph)",
+      "animations": "framer-motion (for micro-interactions, AI loading states, and page transitions)"
+    },
+    "specific_components": {
+      "ai_summary": "Should be visually distinct. Use a subtle bg-primary/10 background with a solid primary-colored left border (border-l-4 border-primary) and a spark icon.",
+      "risk_indicators": "Use badge components with high-contrast background colors: bg-destructive/20 text-destructive for high risk, bg-warning/20 text-warning for medium.",
+      "tables": "Dense rows, no alternating background colors. 1px bottom border for rows. Hover state: bg-muted/50."
+    }
+  },
+  "motion_and_interaction": {
+    "hover_states": "Crisp and immediate. Elements should have transition-all duration-200. Cards should NOT lift up, but borders should illuminate.",
+    "focus_states": "focus:ring-2 focus:ring-primary focus:outline-none.",
+    "ai_loading": "Use a subtle pulsing opacity or an ASCII-style terminal loader rather than a generic spinner.",
+    "page_transitions": "Fade in with a slight upward translation (y: 10, opacity: 0 -> y: 0, opacity: 1)."
+  },
+  "image_urls": {
+    "hero_login_background": {
+      "url": "https://images.unsplash.com/photo-1683447551794-1c287cd42675?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA1NTZ8MHwxfHNlYXJjaHwzfHxhYnN0cmFjdCUyMGRhcmslMjBuZXR3b3JrJTIwbm9kZXMlMjB0ZWNobm9sb2d5JTIwYmFja2dyb3VuZHxlbnwwfHx8fDE3NzU1MDU5ODh8MA&ixlib=rb-4.1.0&q=85",
+      "description": "Abstract dark network nodes to be used as a low-opacity background for the Login/Signup page.",
+      "usage": "Use with bg-black/80 overlay to ensure text contrast."
+    },
+    "ai_insights_graphic": {
+      "url": "https://images.pexels.com/photos/17485657/pexels-photo-17485657.png?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+      "description": "3D neural network representation.",
+      "usage": "Can be used as a thumbnail or subtle background inside the AI Insights page/panel header."
+    },
+    "team_avatars": [
+      {
+        "url": "https://images.unsplash.com/photo-1762522926157-bcc04bf0b10a?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA3MDB8MHwxfHNlYXJjaHwzfHxwcm9mZXNzaW9uYWwlMjBoZWFkc2hvdCUyMHBvcnRyYWl0fGVufDB8fHx8MTc3NTUwNTk3NHww&ixlib=rb-4.1.0&q=85",
+        "role": "Project Manager"
+      },
+      {
+        "url": "https://images.unsplash.com/photo-1769636929388-99eff95d3bf1?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA3MDB8MHwxfHNlYXJjaHw0fHxwcm9mZXNzaW9uYWwlMjBoZWFkc2hvdCUyMHBvcnRyYWl0fGVufDB8fHx8MTc3NTUwNTk3NHww&ixlib=rb-4.1.0&q=85",
+        "role": "Lead Engineer"
+      },
+      {
+        "url": "https://images.pexels.com/photos/32721688/pexels-photo-32721688.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+        "role": "Data Scientist"
+      },
+      {
+        "url": "https://images.unsplash.com/photo-1672685667592-0392f458f46f?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA3MDB8MHwxfHNlYXJjaHwyfHxwcm9mZXNzaW9uYWwlMjBoZWFkc2hvdCUyMHBvcnRyYWl0fGVufDB8fHx8MTc3NTUwNTk3NHww&ixlib=rb-4.1.0&q=85",
+        "role": "Designer"
+      }
+    ]
+  },
+  "instructions_to_main_agent": [
+    "Install and configure React Flow (reactflow) for the Dependency Graph page. This is critical for visualizing task dependencies and critical chains.",
+    "Install and use Recharts for the Team Analytics page (bar charts for workload, line charts for progress).",
+    "Install @phosphor-icons/react for iconography.",
+    "Ensure the application follows a strict dark mode theme (no light mode toggle required, it is a native dark application).",
+    "Do NOT use generic card shadows. Stick to the 1px border philosophy defined in the surface strategies.",
+    "Implement the AI summary panel with the primary color accent to differentiate it from standard data tables.",
+    "Every page must have a top navigation or a side navigation that stays sticky.",
+    "Inject 'data-testid' on all core interaction elements (buttons, inputs, specific task cards) for testing."
+  ]
+}

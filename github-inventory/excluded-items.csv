@@ -1,0 +1,7 @@
+"Type","RelativePath","SizeBytes","Reason"
+"Directory","__pycache__","","Excluded directory '__pycache__'"
+"Directory",".emergent","","Excluded directory '.emergent'"
+"Directory","memory","","Excluded directory 'memory'"
+"Directory","test_reports","","Excluded directory 'test_reports'"
+"File",".gitconfig","61","Excluded generated runtime/build file"
+"Directory","backend\__pycache__","","Excluded directory '__pycache__'"
